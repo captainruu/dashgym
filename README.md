@@ -1,2 +1,0 @@
-# dashgym
-Dash Gym Bali
