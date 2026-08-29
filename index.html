@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dash Gym Bali – Uluwatu, Bali</title>
+<meta name="description" content="South Bali's go-to fitness center in Pecatu, Uluwatu. Full gym facilities, personal training and group classes for locals, expats and visitors alike.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png">
+<link rel="shortcut icon" type="image/png" href="assets/images/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/public.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <a href="#hero" style="display:inline-block;line-height:0;"><img src="assets/images/logo-gold.png" alt="Dash Gym Bali"></a>
+    <span style="display:none;font-family:var(--font-head);font-size:22px;letter-spacing:2px;">DASH GYM BALI</span>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about" data-en="About" data-id="Tentang">About</a></li>
+    <li><a href="#facilities" data-en="Facilities" data-id="Fasilitas">Facilities</a></li>
+    <li><a href="#packages" data-en="Packages" data-id="Paket">Packages</a></li>
+    <li><a href="#services" data-en="Services" data-id="Layanan">Services</a></li>
+    <li><a href="#promo" data-en="Promo" data-id="Promo">Promo</a></li>
+    <li><a href="#contact" data-en="Contact" data-id="Kontak">Contact</a></li>
+    <li class="mobile-menu-extra" style="display:none;gap:.6rem;margin-top:.75rem;padding-top:.75rem;border-top:1px solid var(--border);">
+      <button class="btn btn-primary btn-sm" style="flex:1;justify-content:center;" onclick="document.getElementById('pkg-section').scrollIntoView({behavior:'smooth'});toggleMobileNav();" data-en="Join Us" data-id="Gabung">Join Us</button>
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('id')">ID</button>
+      </div>
+    </li>
+  </ul>
+  <div class="nav-actions">
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('id')">ID</button>
+    </div>
+    <a href="login.html" class="btn btn-outline btn-sm" data-en="Login" data-id="Masuk">Login</a>
+    <button class="btn btn-primary btn-sm" onclick="document.getElementById('pkg-section').scrollIntoView({behavior:'smooth'})" data-en="Join Us" data-id="Gabung">Join Us</button>
+    <div class="hamburger" onclick="toggleMobileNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-tilt" id="heroTilt">
+    <div class="hero-slides" id="heroSlides">
+      <div class="hero-slide active"><img src="assets/images/hero-1.jpg" alt="Dash Gym Bali - Cardio & Functional Training Area"></div>
+      <div class="hero-slide"><img src="assets/images/hero-2.jpg" alt="Dash Gym Bali - Weight Training Floor"></div>
+      <div class="hero-slide"><img src="assets/images/hero-3.jpg" alt="Dash Gym Bali - Open Gym Facility"></div>
+    </div>
+    <div class="hero-cursor-glow" id="heroGlow"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-tag" data-en="Dreamland, Uluwatu, Bali – Fitness Forged to Perfection" data-id="Dreamland, Uluwatu, Bali – Fitness Forged to Perfection">Dreamland, Uluwatu, Bali – Fitness Forged to Perfection</p>
+    <h1 class="hero-title">DASH<br><span>GYM</span><br>BALI</h1>
+    <p class="hero-sub" data-en="South Bali's go-to fitness center. Full gym facilities, personal training and group classes for locals, expats and visitors alike." data-id="Pusat kebugaran pilihan South Bali. Fasilitas gym lengkap, personal training, dan kelas grup untuk lokal, ekspat, maupun wisatawan.">South Bali's go-to fitness center. Full gym facilities, personal training and group classes for locals, expats and visitors alike.</p>
+    <div class="hero-btns">
+      <button class="btn btn-primary" onclick="document.getElementById('pkg-section').scrollIntoView({behavior:'smooth'})" data-en="Join Now" data-id="Daftar Sekarang">Join Now</button>
+      <button class="btn btn-outline" onclick="document.getElementById('facilities').scrollIntoView({behavior:'smooth'})" data-en="Explore Facilities" data-id="Lihat Fasilitas">Explore Facilities</button>
+    </div>
+  </div>
+  <div class="hero-indicators" id="heroIndicators"></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap">
+        <img src="assets/images/about-dash.jpg" alt="Dash Gym Bali - Pecatu, Uluwatu">
+        <div class="about-badge">
+          <div class="num">1000</div>
+          <div class="lab" data-en="Sqm" data-id="Sqm">Sqm</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="section-tag" data-en="About Us" data-id="Tentang Kami">About Us</p>
+        <h2 class="section-title" data-en="More Than A Gym" data-id="Lebih Dari Sekedar Gym">More Than A Gym</h2>
+        <div class="divider"></div>
+        <p data-en="Dash Gym is South Bali's go-to fitness center, located in Pecatu, Kabupaten Badung. We offer fully equipped gym facilities, personal training, group fitness classes and flexible membership plans designed for locals, expats and Bali visitors alike." data-id="Dash Gym adalah pusat kebugaran andalan South Bali, berlokasi di Pecatu, Kabupaten Badung. Kami menyediakan fasilitas gym lengkap, personal training, kelas fitness grup, dan paket membership fleksibel untuk warga lokal, ekspat, maupun wisatawan Bali.">Dash Gym is South Bali's go-to fitness center, located in Pecatu, Kabupaten Badung. We offer fully equipped gym facilities, personal training, group fitness classes and flexible membership plans designed for locals, expats and Bali visitors alike.</p>
+        <p data-en="Whether you're after serious weight training, a high-intensity cardio session or a guided HIIT class, Dash Gym gives you everything you need in a clean, welcoming environment — with a 1000sqm training floor, relaxation area and recovery access to help you go further." data-id="Baik Anda ingin latihan beban yang serius, sesi kardio intensitas tinggi, atau kelas HIIT terpandu, Dash Gym menyediakan semua yang Anda butuhkan dalam lingkungan yang bersih dan ramah — dengan area latihan seluas 1000sqm, area relaksasi, dan akses recovery untuk membantu Anda mencapai lebih.">Whether you're after serious weight training, a high-intensity cardio session or a guided HIIT class, Dash Gym gives you everything you need in a clean, welcoming environment — with a 1000sqm training floor, relaxation area and recovery access to help you go further.</p>
+        <div class="about-stats">
+          <div class="stat-card"><div class="stat-num">1000</div><div class="stat-lab" data-en="Sqm Gym Floor" data-id="Sqm Area Gym">Sqm Gym Floor</div></div>
+          <div class="stat-card"><div class="stat-num">07-19</div><div class="stat-lab" data-en="Open Daily" data-id="Buka Setiap Hari">Open Daily</div></div>
+          <div class="stat-card"><div class="stat-num">∞</div><div class="stat-lab" data-en="Motivation" data-id="Motivasi">Motivation</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACILITIES -->
+<section id="facilities">
+  <div class="container">
+    <div class="facilities-header">
+      <div>
+        <p class="section-tag" data-en="World-Class Equipment" data-id="Peralatan Kelas Dunia">World-Class Equipment</p>
+        <h2 class="section-title" data-en="Our Facilities" data-id="Fasilitas Kami">Our Facilities</h2>
+      </div>
+    </div>
+    <div class="fac-grid">
+      <div class="fac-card">
+        <div class="fac-icon-wrap"><div class="fac-icon-circle">
+          <svg viewBox="0 0 64 64"><path d="M14 32h36M8 32h4M52 32h4M14 24v16M50 24v16M20 20v24M44 20v24"/></svg>
+        </div></div>
+        <div class="fac-overlay"></div>
+        <div class="fac-info"><div class="fac-name" data-en="Weight Training" data-id="Ruang Beban">Weight Training</div><div class="fac-desc" data-en="Full free weight & machine setup" data-id="Peralatan beban bebas & mesin lengkap">Full free weight & machine setup</div></div>
+      </div>
+      <div class="fac-card">
+        <div class="fac-icon-wrap"><div class="fac-icon-circle">
+          <svg viewBox="0 0 64 64"><path d="M8 34h9l4-12 8 22 6-16 4 6h17"/></svg>
+        </div></div>
+        <div class="fac-overlay"></div>
+        <div class="fac-info"><div class="fac-name" data-en="Cardio Zone" data-id="Zona Kardio">Cardio Zone</div><div class="fac-desc" data-en="Treadmills, bikes & rowers" data-id="Treadmill, sepeda & rower">Treadmills, bikes & rowers</div></div>
+      </div>
+      <div class="fac-card">
+        <div class="fac-icon-wrap"><div class="fac-icon-circle">
+          <svg viewBox="0 0 64 64"><circle cx="22" cy="16" r="5"/><circle cx="42" cy="16" r="5"/><path d="M14 46v-9a8 8 0 0 1 8-8h0a8 8 0 0 1 8 8v9M34 46v-9a8 8 0 0 1 8-8h0a8 8 0 0 1 8 8v9"/></svg>
+        </div></div>
+        <div class="fac-overlay"></div>
+        <div class="fac-info"><div class="fac-name" data-en="HIIT & Group Classes" data-id="Kelas HIIT & Grup">HIIT & Group Classes</div><div class="fac-desc" data-en="Guided high-intensity sessions" data-id="Sesi intensitas tinggi terpandu">Guided high-intensity sessions</div></div>
+      </div>
+      <div class="fac-card">
+        <div class="fac-icon-wrap"><div class="fac-icon-circle">
+          <svg viewBox="0 0 64 64"><circle cx="32" cy="16" r="7"/><path d="M16 48c0-9 7-16 16-16s16 7 16 16"/><path d="M26 40l5 5 9-11"/></svg>
+        </div></div>
+        <div class="fac-overlay"></div>
+        <div class="fac-info"><div class="fac-name" data-en="Personal Training" data-id="Personal Training">Personal Training</div><div class="fac-desc" data-en="Certified trainers, tailored programs" data-id="Trainer bersertifikat, program personal">Certified trainers, tailored programs</div></div>
+      </div>
+      <div class="fac-card">
+        <div class="fac-icon-wrap"><div class="fac-icon-circle">
+          <svg viewBox="0 0 64 64"><path d="M10 22V10h12M42 10h12v12M54 42v12H42M22 54H10V42"/><rect x="20" y="20" width="24" height="24" rx="2"/></svg>
+        </div></div>
+        <div class="fac-overlay"></div>
+        <div class="fac-info"><div class="fac-name" data-en="Open Gym" data-id="Open Gym">Open Gym</div><div class="fac-desc" data-en="1000sqm training floor" data-id="Area latihan 1000sqm">1000sqm training floor</div></div>
+      </div>
+      <div class="fac-card">
+        <div class="fac-icon-wrap"><div class="fac-icon-circle">
+          <svg viewBox="0 0 64 64"><path d="M32 8c8 10 14 18.5 14 27a14 14 0 0 1-28 0c0-8.5 6-17 14-27z"/><path d="M26 40a6 6 0 0 0 6 6"/></svg>
+        </div></div>
+        <div class="fac-overlay"></div>
+        <div class="fac-info"><div class="fac-name" data-en="Recovery Access" data-id="Recovery Access">Recovery Access</div><div class="fac-desc" data-en="Sauna & ice bath — coming soon" data-id="Sauna & ice bath — segera hadir">Sauna & ice bath — coming soon</div></div>
+      </div>
+      <div class="fac-card">
+        <div class="fac-icon-wrap"><div class="fac-icon-circle">
+          <svg viewBox="0 0 64 64"><circle cx="32" cy="20" r="8"/><path d="M14 20h6M44 20h6M32 2v6M17.5 5.5l4.2 4.2M46.5 5.5l-4.2 4.2M10 48h44M14 48c0-6 3-10 6-10h24c3 0 6 4 6 10"/></svg>
+        </div></div>
+        <div class="fac-overlay"></div>
+        <div class="fac-info"><div class="fac-name" data-en="Relaxation Area" data-id="Area Relaksasi">Relaxation Area</div><div class="fac-desc" data-en="Pool, lounge & recharge space" data-id="Kolam, lounge & tempat bersantai">Pool, lounge & recharge space</div></div>
+      </div>
+      <div class="fac-card">
+        <div class="fac-icon-wrap"><div class="fac-icon-circle">
+          <svg viewBox="0 0 64 64"><path d="M16 8v18a6 6 0 0 0 6 6v24M16 8v14M22 8v14M28 8v14"/><path d="M44 8c-6 0-8 6-8 12s3 10 8 10 8-4 8-10-2-12-8-12z"/><path d="M44 30v26"/></svg>
+        </div></div>
+        <div class="fac-overlay"></div>
+        <div class="fac-info"><div class="fac-name" data-en="Food & Drinks" data-id="Food & Drinks">Food & Drinks</div><div class="fac-desc" data-en="Delivered on request" data-id="Diantar sesuai permintaan">Delivered on request</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section id="packages">
+  <div class="container" id="pkg-section">
+    <p class="section-tag" data-en="Membership Plans" data-id="Paket Keanggotaan">Membership Plans</p>
+    <h2 class="section-title" data-en="Choose Your Plan" data-id="Pilih Paket Anda">Choose Your Plan</h2>
+    <div class="divider"></div>
+    <div class="pkg-grid" id="pkgGrid">
+      <!-- Generated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <p class="section-tag" data-en="Additional Services" data-id="Layanan Tambahan">Additional Services</p>
+    <h2 class="section-title" data-en="Our Services" data-id="Layanan Kami">Our Services</h2>
+    <div class="divider"></div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <div><div class="svc-name" data-en="Personal Trainer" data-id="Pelatih Pribadi">Personal Trainer</div><div class="svc-desc" data-en="One-on-one expert coaching" data-id="Pelatihan satu-satu dengan ahli">One-on-one expert coaching</div></div>
+        <div><div class="svc-price" data-en="Ask Us" data-id="Hubungi Kami">Ask Us</div><div class="svc-price-unit" data-en="Custom rates" data-id="Harga sesuai kebutuhan">Custom rates</div></div>
+      </div>
+      <div class="svc-card">
+        <div><div class="svc-name" data-en="Recovery Access" data-id="Recovery Access">Recovery Access</div><div class="svc-desc" data-en="Sauna & ice bath — coming soon" data-id="Sauna & ice bath — segera hadir">Sauna & ice bath — coming soon</div></div>
+        <div><div class="svc-price">250 K</div><div class="svc-price-unit" data-en="/ person, taxes included" data-id="/ orang, sudah termasuk pajak">/ person, taxes included</div></div>
+      </div>
+      <div class="svc-card">
+        <div><div class="svc-name" data-en="Relaxation Area" data-id="Area Relaksasi">Relaxation Area</div><div class="svc-desc" data-en="Pool & lounge to recharge" data-id="Kolam & lounge untuk bersantai">Pool & lounge to recharge</div></div>
+        <div><div class="svc-price" data-en="Included" data-id="Termasuk">Included</div><div class="svc-price-unit" data-en="with Recovery Access" data-id="dengan Recovery Access">with Recovery Access</div></div>
+      </div>
+      <div class="svc-card">
+        <div><div class="svc-name" data-en="Food & Drinks" data-id="Food & Drinks">Food & Drinks</div><div class="svc-desc" data-en="Delivered to your spot on request" data-id="Diantar ke tempat Anda sesuai permintaan">Delivered to your spot on request</div></div>
+        <div><div class="svc-price" data-en="Ask Us" data-id="Hubungi Kami">Ask Us</div><div class="svc-price-unit" data-en="At reception" data-id="Di resepsionis">At reception</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMO -->
+<section id="promo">
+  <div class="container">
+    <p class="section-tag" data-en="Latest Deals" data-id="Penawaran Terbaru">Latest Deals</p>
+    <h2 class="section-title" data-en="Promo & Events" data-id="Promo & Acara">Promo & Events</h2>
+    <div class="divider"></div>
+    <div class="promo-grid" id="promoGrid">
+      <div class="promo-empty">
+        <p data-en="No active promotions at the moment. Check back soon!" data-id="Tidak ada promo aktif saat ini. Pantau terus!">No active promotions at the moment. Check back soon!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <p class="section-tag" data-en="Find Us" data-id="Temukan Kami">Find Us</p>
+    <h2 class="section-title" data-en="Get In Touch" data-id="Hubungi Kami">Get In Touch</h2>
+    <div class="divider"></div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="info-item">
+          <div class="info-icon">
+            <!-- Location pin -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          </div>
+          <div><div class="info-label" data-en="Address" data-id="Alamat">Address</div><div class="info-val" data-en="Pecatu, Uluwatu, Bali, Indonesia" data-id="Pecatu, Uluwatu, Bali, Indonesia">Pecatu, Uluwatu, Bali, Indonesia</div></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <!-- WhatsApp chat bubble -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+          </div>
+          <div><div class="info-label">WhatsApp</div><div class="info-val">+62 851-9094-0487</div></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <!-- Instagram camera -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="var(--blue)" stroke="none"/></svg>
+          </div>
+          <div><div class="info-label">Instagram</div><div class="info-val">@dash.gym.bali</div></div>
+        </div>
+        <div class="cta-row">
+          <a href="https://wa.me/6285190940487" class="btn btn-primary" target="_blank" style="gap:.55rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Us
+          </a>
+          <a href="https://www.instagram.com/dash.gym.bali/" class="btn btn-outline" target="_blank" style="gap:.55rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+            Follow @DASH
+          </a>
+          <a href="https://maps.app.goo.gl/broyoXYcedrw6FoWA" class="btn btn-outline" target="_blank" style="gap:.55rem;" data-en="Get Directions" data-id="Petunjuk Arah">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+            Get Directions
+          </a>
+        </div>
+      </div>
+      <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31596.67!2d115.1!3d-8.82!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwNDknMTIuMCJTIDExNcKwMDYnMDAuMCJF!5e0!3m2!1sen!2sid!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/images/logo-gold.png" alt="DASH" onerror="this.style.display='none'">
+        <p style="font-family:var(--font-head);font-size:20px;letter-spacing:2px;margin-bottom:.5rem;">DASH GYM BALI</p>
+        <p data-en="South Bali's go-to fitness center in Pecatu, Uluwatu. Train, recover, repeat." data-id="Pusat kebugaran andalan South Bali di Pecatu, Uluwatu. Latihan, pemulihan, ulangi.">South Bali's go-to fitness center in Pecatu, Uluwatu. Train, recover, repeat.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Facilities" data-id="Fasilitas">Facilities</h4>
+        <ul>
+          <li><a href="#facilities" data-en="Weight Training" data-id="Ruang Beban">Weight Training</a></li>
+          <li><a href="#facilities" data-en="Cardio Zone" data-id="Zona Kardio">Cardio Zone</a></li>
+          <li><a href="#facilities" data-en="HIIT & Group Classes" data-id="Kelas HIIT & Grup">HIIT & Group Classes</a></li>
+          <li><a href="#facilities" data-en="Personal Training" data-id="Personal Training">Personal Training</a></li>
+          <li><a href="#facilities" data-en="Recovery Access" data-id="Recovery Access">Recovery Access</a></li>
+          <li><a href="#facilities" data-en="Relaxation Area" data-id="Area Relaksasi">Relaxation Area</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Quick Links" data-id="Tautan Cepat">Quick Links</h4>
+        <ul>
+          <li><a href="#packages" data-en="Membership Plans" data-id="Paket Keanggotaan">Membership Plans</a></li>
+          <li><a href="#services" data-en="Services" data-id="Layanan">Services</a></li>
+          <li><a href="#promo" data-en="Promotions" data-id="Promosi">Promotions</a></li>
+          <li><a href="#contact" data-en="Contact" data-id="Kontak">Contact</a></li>
+          <li><a href="login.html">Member Login</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Dash Gym Bali. All rights reserved.</p>
+      <p data-en="Pecatu, Uluwatu, Bali, Indonesia" data-id="Pecatu, Uluwatu, Bali, Indonesia">Pecatu, Uluwatu, Bali, Indonesia</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== LOGIN PAGE ==================== -->
+<div class="modal-overlay" id="joinModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 class="modal-title" data-en="Join Dash Gym Bali" data-id="Bergabung dengan DASH">Join Dash Gym Bali</h3>
+      <button class="modal-close" onclick="closeModal('joinModal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="selected-pkg" id="selectedPkgInfo"></div>
+      <div class="form-group"><label data-en="Full Name" data-id="Nama Lengkap">Full Name</label><input type="text" id="joinName" placeholder="Your full name"></div>
+      <div class="form-group"><label data-en="Phone / WhatsApp" data-id="Telepon / WhatsApp">Phone / WhatsApp</label><input type="text" id="joinPhone" placeholder="+62..."></div>
+      <p class="form-hint" data-en="After submitting, please visit our front desk or contact us on WhatsApp to complete your registration." data-id="Setelah mengirim, harap kunjungi meja kami atau hubungi via WhatsApp untuk menyelesaikan pendaftaran.">After submitting, please visit our front desk or contact us on WhatsApp to complete your registration.</p>
+      <button class="btn btn-primary" style="width:100%;justify-content:center;margin-top:1.5rem;" onclick="submitJoin()" data-en="Submit Registration" data-id="Kirim Pendaftaran">Submit Registration</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ==================== DIGITAL MEMBER CARD MODAL ==================== -->
+<!-- AI CHATBOX -->
+<button class="chatbox-toggle" onclick="toggleChat()">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><line x1="9" y1="10" x2="15" y2="10"/><line x1="12" y1="7" x2="12" y2="13"/></svg>
+</button>
+<div class="chatbox" id="chatbox">
+  <div class="chat-header">
+    <div class="chat-avatar">M</div>
+    <div><div class="chat-hname">DASH Assistant</div><div class="chat-hsub">Ask me anything</div></div>
+    <button onclick="toggleChat()" style="margin-left:auto;background:none;border:none;color:var(--gray);cursor:pointer;font-size:16px;">✕</button>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-msg bot" data-en="Hi! I'm the Dash Gym Bali assistant. Ask me about our facilities, packages, or how to become a member! 💪" data-id="Halo! Saya asisten Dash Gym Bali. Tanya saya tentang fasilitas, paket, atau cara menjadi member! 💪">Hi! I'm the Dash Gym Bali assistant. Ask me about our facilities, packages, or how to become a member! 💪</div>
+  </div>
+  <div class="chat-input-row">
+    <input class="chat-input" id="chatInput" placeholder="Type a message..." onkeydown="if(event.key==='Enter')sendChat()">
+    <button class="chat-send" onclick="sendChat()">Send</button>
+  </div>
+</div>
+
+<!-- ==================== PROMO POPUP MODAL ==================== -->
+<!-- PROMO FULL-POSTER POPUP -->
+<div id="promoPopupModal"
+  style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:3000;
+         align-items:center;justify-content:center;padding:1rem;overflow-y:auto;"
+  onclick="if(event.target===this)this.style.display='none'">
+
+  <!-- Close button (always visible, floats top-right of screen) -->
+  <button onclick="document.getElementById('promoPopupModal').style.display='none'"
+    style="position:fixed;top:1rem;right:1rem;background:rgba(255,255,255,.15);
+           backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.2);
+           color:#fff;font-size:20px;cursor:pointer;z-index:10;
+           width:40px;height:40px;border-radius:50%;
+           display:flex;align-items:center;justify-content:center;
+           transition:background .2s;"
+    onmouseover="this.style.background='rgba(255,255,255,.28)'"
+    onmouseout="this.style.background='rgba(255,255,255,.15)'">✕</button>
+
+  <!-- Card wrapper: max-width keeps 4:5 ratio legible on all screens -->
+  <div style="width:100%;max-width:480px;display:flex;flex-direction:column;gap:0;">
+
+    <!-- POSTER IMAGE — full 4:5 ratio (1080:1350), no crop -->
+    <div id="promoPopupImgWrap"
+      style="width:100%;aspect-ratio:4/5;background:#111;overflow:hidden;display:none;position:relative;">
+      <img id="promoPopupImg" src="" alt=""
+        style="width:100%;height:100%;object-fit:contain;display:block;background:#111;">
+    </div>
+
+    <!-- CAPTION STRIP — tag + title (only shown when there IS text) -->
+    <div id="promoPopupCaption"
+      style="background:var(--dark2);border-left:3px solid var(--blue);
+             padding:.9rem 1.1rem;display:none;">
+      <div id="promoPopupTag"
+        style="font-family:var(--font-cond);font-size:10px;letter-spacing:2.5px;
+               text-transform:uppercase;color:var(--blue);margin-bottom:.25rem;display:none;">
+      </div>
+      <div id="promoPopupTitle"
+        style="font-family:var(--font-head);font-size:22px;line-height:1.1;color:var(--white);">
+      </div>
+      <div id="promoPopupDesc"
+        style="font-size:13px;color:rgba(245,245,240,.65);line-height:1.7;
+               margin-top:.4rem;white-space:pre-line;display:none;">
+      </div>
+    </div>
+
+    <!-- CLAIM BUTTON — always at bottom, full width -->
+    <a id="promoPopupWABtn" href="https://wa.me/6285190940487" target="_blank"
+      style="display:flex;align-items:center;justify-content:center;gap:.6rem;
+             background:#25d366;color:#fff;text-decoration:none;
+             font-family:var(--font-cond);font-size:15px;letter-spacing:2px;
+             text-transform:uppercase;font-weight:700;
+             padding:1rem;border-radius:0;">
+      <!-- WhatsApp icon -->
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      Claim via WhatsApp
+    </a>
+
+  </div>
+</div>
+
+
+<div id="toast" class="toast"></div>
+
+<script type="module">
+  import { setLang, initModalOverlayClose } from './js/utils.js';
+  import {
+    initHero, initHeroTilt, goHero, renderPackages, renderPromos,
+    openPromoPopup, openJoin, submitJoin, sendChat, toggleChat, toggleMobileNav
+  } from './js/public-site.js';
+
+  window.setLang = setLang;
+  window.goHero = goHero;
+  window.openPromoPopup = openPromoPopup;
+  window.openJoin = openJoin;
+  window.submitJoin = submitJoin;
+  window.sendChat = sendChat;
+  window.toggleChat = toggleChat;
+  window.toggleMobileNav = toggleMobileNav;
+
+  document.addEventListener('DOMContentLoaded', async ()=>{
+    const { showLoading, hideLoading, showToast } = await import('./js/utils.js');
+    showLoading('Connecting to database…');
+    try{
+      initHero();
+      initHeroTilt();
+      await renderPackages();
+      await renderPromos();
+    }catch(e){ console.error('Init error:',e); showToast('⚠ Database connection issue.'); }
+    hideLoading();
+    const ns=document.getElementById('newStart');
+    if(ns) ns.value=new Date().toISOString().split('T')[0];
+    initModalOverlayClose();
+  });
+</script>
+</body>
+</html>

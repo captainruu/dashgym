@@ -1,0 +1,46 @@
+/* LOGIN PAGE */
+#login-page{display:flex;min-height:100vh;align-items:center;justify-content:center;background:var(--black);}
+.login-box{background:var(--dark2);border:1px solid var(--border);padding:3rem;width:100%;max-width:440px;text-align:center;}
+.login-logo{margin-bottom:2rem;}
+.login-logo img{height:50px;filter:brightness(0) invert(1);}
+.login-title{font-family:var(--font-head);font-size:36px;color:var(--white);margin-bottom:.5rem;}
+.login-sub{font-size:14px;color:var(--gray);margin-bottom:2rem;}
+
+/* MEMBER DASHBOARD */
+#member-page{display:block;min-height:100vh;background:var(--black);padding-top:80px;}
+.dash-header{background:var(--dark);border-bottom:1px solid var(--border);padding:2rem 0;}
+.member-idcard{background:#ffffff;color:#111;max-width:460px;margin:0 auto 2.5rem;border-radius:6px;overflow:hidden;box-shadow:0 25px 70px rgba(0,0,0,.45);}
+.micard-header{background:#cfb58c;padding:1.5rem;text-align:center;}
+.micard-logo{height:32px;width:auto;object-fit:contain;}
+.micard-body{padding:2rem 1.75rem 2.25rem;text-align:center;}
+.micard-status-pill{display:inline-flex;align-items:center;gap:.4rem;background:#16a34a;color:#fff;padding:.4rem 1.4rem;border-radius:999px;font-family:var(--font-cond);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:1.5rem;}
+.micard-status-pill.expired{background:#dc2626;}
+.micard-label{font-family:var(--font-cond);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#777;margin-bottom:.35rem;}
+.micard-id{font-family:var(--font-head);font-size:22px;font-weight:800;color:#111;margin-bottom:1.1rem;letter-spacing:1px;}
+.micard-name{font-family:var(--font-head);font-size:26px;font-weight:800;color:#cfb58c;margin-bottom:.85rem;line-height:1.1;}
+.micard-phone{font-size:15px;color:#333;margin-bottom:1.4rem;}
+.micard-expiry-label{font-family:var(--font-cond);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#777;margin-bottom:.25rem;}
+.micard-expiry{font-size:15px;font-weight:700;color:#dc2626;margin-bottom:1.85rem;}
+.micard-checkin-btn{background:#cfb58c;color:#0a0a0a;border:none;padding:.85rem 2.75rem;border-radius:999px;font-family:var(--font-cond);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;cursor:pointer;transition:opacity .2s,transform .2s;}
+.micard-checkin-btn:hover{opacity:.85;transform:translateY(-1px);}
+.micard-checkin-btn:disabled{opacity:.4;cursor:not-allowed;transform:none;}
+.dash-title{font-family:var(--font-head);font-size:48px;}
+.member-card{background:var(--dark2);border:1px solid var(--border);padding:2.5rem;margin-top:2rem;}
+.member-status{display:flex;align-items:center;gap:.5rem;font-family:var(--font-cond);font-size:13px;letter-spacing:2px;text-transform:uppercase;margin-bottom:.5rem;}
+.status-dot{width:8px;height:8px;border-radius:50%;}
+.status-active{background:#22c55e;}
+.status-expired{background:#ef4444;}
+.member-name{font-family:var(--font-head);font-size:48px;}
+.member-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem;}
+.meta-item{border:1px solid var(--border);padding:1rem;}
+.meta-label{font-family:var(--font-cond);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--blue);}
+.meta-val{font-size:16px;margin-top:.3rem;}
+.barcode-section{margin-top:2rem;border-top:1px solid var(--border);padding-top:2rem;}
+.barcode-section h3{font-family:var(--font-cond);font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:1rem;}
+#qr-container{background:white;display:inline-block;padding:16px;}
+
+
+/* MOBILE */
+@media(max-width:600px){
+  .member-meta{grid-template-columns:repeat(2,1fr);}
+}

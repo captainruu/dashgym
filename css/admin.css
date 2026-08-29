@@ -1,0 +1,102 @@
+/* ADMIN DASHBOARD */
+#admin-page{display:none!important;min-height:100vh;background:var(--black);}
+#admin-page.active{display:flex!important;}
+.admin-sidebar{width:240px;background:var(--dark);border-right:1px solid var(--border);padding:1.5rem 0;position:fixed;top:0;bottom:0;overflow-y:auto;}
+.admin-sidebar .logo{padding:1rem 1.5rem 2rem;}
+.admin-sidebar .logo img{height:36px;filter:brightness(0) invert(1);}
+.admin-nav{list-style:none;}
+.admin-nav li a,.admin-nav li button{display:flex;align-items:center;gap:.75rem;padding:.75rem 1.5rem;color:var(--gray);text-decoration:none;font-family:var(--font-cond);font-size:13px;letter-spacing:1px;text-transform:uppercase;cursor:pointer;background:none;border:none;width:100%;transition:all .2s;}
+.admin-nav li a:hover,.admin-nav li button:hover,.admin-nav li a.active,.admin-nav li button.active{color:var(--blue);background:rgba(233,219,194,0.06);border-left:2px solid var(--blue);}
+.admin-main{margin-left:240px;flex:1;padding:2rem;}
+.admin-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;}
+.admin-page-title{font-family:var(--font-head);font-size:40px;}
+.admin-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2rem;}
+.admin-stat{background:var(--dark2);border:1px solid var(--border);padding:1.25rem;}
+.admin-stat-num{font-family:var(--font-head);font-size:36px;color:var(--blue);}
+.admin-stat-label{font-family:var(--font-cond);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-top:.2rem;}
+.admin-section{background:var(--dark2);border:1px solid var(--border);margin-bottom:1.5rem;}
+.admin-section-head{padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
+.admin-section-title{font-family:var(--font-cond);font-size:16px;letter-spacing:1px;text-transform:uppercase;font-weight:600;}
+.admin-table{width:100%;border-collapse:collapse;}
+.admin-table th{background:var(--dark3);font-family:var(--font-cond);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--blue);padding:.75rem 1rem;text-align:left;border-bottom:1px solid var(--border);}
+.admin-table td{padding:.75rem 1rem;border-bottom:1px solid rgba(255,255,255,0.04);font-size:13px;}
+.admin-table tr:hover td{background:rgba(255,255,255,0.02);}
+.badge{display:inline-block;padding:.2rem .6rem;font-family:var(--font-cond);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.badge-active{background:rgba(34,197,94,.15);color:#22c55e;border:1px solid rgba(34,197,94,.2);}
+.badge-expired{background:rgba(239,68,68,.15);color:#ef4444;border:1px solid rgba(239,68,68,.2);}
+.badge-pending{background:rgba(234,179,8,.15);color:#eab308;border:1px solid rgba(234,179,8,.2);}
+.notification-bar{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);padding:1rem 1.5rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem;}
+.notif-icon{color:#ef4444;flex-shrink:0;}
+.notif-text{font-size:13px;color:#ef4444;}
+.action-btn{padding:.3rem .7rem;font-family:var(--font-cond);font-size:11px;letter-spacing:1px;text-transform:uppercase;cursor:pointer;background:transparent;border:1px solid var(--border);color:var(--gray);transition:all .2s;}
+.action-btn:hover{border-color:var(--blue);color:var(--blue);}
+.action-btn.danger:hover{border-color:#ef4444;color:#ef4444;}
+.price-input{background:var(--dark3);border:1px solid var(--border);color:var(--white);padding:.4rem .6rem;font-size:13px;width:100px;outline:none;}
+
+
+/* STACKED DISCOUNT */
+.discount-stack{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1rem;}
+.discount-row{display:flex;align-items:center;gap:.5rem;}
+.discount-row input{width:70px;background:var(--dark3);border:1px solid var(--border);color:var(--white);padding:.4rem .6rem;font-size:13px;outline:none;text-align:center;}
+.discount-row .disc-label{font-size:12px;color:var(--gray);font-family:var(--font-cond);letter-spacing:1px;min-width:60px;}
+.discount-row .disc-result{font-size:13px;color:var(--blue);font-family:var(--font-cond);min-width:100px;}
+.btn-add-disc{background:transparent;border:1px dashed var(--border);color:var(--gray);padding:.3rem .8rem;font-size:11px;font-family:var(--font-cond);letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .2s;}
+.btn-add-disc:hover{border-color:var(--blue);color:var(--blue);}
+.btn-rm-disc{background:none;border:none;color:var(--gray2);font-size:14px;cursor:pointer;padding:0 .25rem;line-height:1;}
+.btn-rm-disc:hover{color:#ef4444;}
+
+
+/* MOBILE */
+@media(max-width:900px){
+  .admin-sidebar{width:200px;}
+  .admin-main{margin-left:200px;}
+}
+@media(max-width:600px){
+  /* Admin bottom nav on mobile */
+  .admin-sidebar{
+    width:100%;height:58px;
+    position:fixed;top:auto;bottom:0;left:0;right:0;
+    border-right:none;border-top:1px solid var(--border);
+    padding:0;overflow:hidden;z-index:150;
+    display:flex;flex-direction:column;
+    background:var(--dark);
+  }
+  .admin-sidebar .logo{display:none;}
+  .admin-nav{
+    display:flex;flex-direction:row;
+    height:58px;overflow-x:auto;
+    scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  }
+  .admin-nav::-webkit-scrollbar{display:none;}
+  .admin-nav li{flex-shrink:0;}
+  .admin-nav li a,
+  .admin-nav li button{
+    flex-direction:column;gap:2px;
+    padding:4px 12px;height:58px;
+    font-size:9px;letter-spacing:.5px;
+    justify-content:center;align-items:center;
+    border-left:none!important;
+    border-top:2px solid transparent;
+  }
+  .admin-nav li a.active,
+  .admin-nav li button.active{
+    background:rgba(233,219,194,0.08);
+    border-left:none!important;
+    border-top:2px solid var(--blue);
+    color:var(--blue);
+  }
+  .admin-nav li a span:first-child,
+  .admin-nav li button span:first-child{font-size:20px;line-height:1;}
+  .admin-main{
+    margin-left:0;
+    padding:1rem;
+    padding-bottom:74px;
+  }
+  .admin-stats{grid-template-columns:repeat(2,1fr);}
+  .admin-top{flex-wrap:wrap;gap:.5rem;}
+  .admin-page-title{font-size:26px;}
+  .admin-table td,.admin-table th{padding:.5rem .6rem;font-size:12px;}
+}
+
+/* QR Scanner animation (used in Check-in & Scan tabs) */
+@keyframes scanAnim{0%{top:4px;}50%{top:calc(100% - 6px);}100%{top:4px;}}

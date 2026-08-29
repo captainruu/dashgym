@@ -1,0 +1,50 @@
+:root {
+  --black: #0a0a0a;
+  --dark: #111111;
+  --dark2: #1a1a1a;
+  --dark3: #222222;
+  --white: #f5f5f0;
+  --blue: #e9dbc2;
+  --blue2: #cdbb96;
+  --blue3: #a68f66;
+  --gray: #888;
+  --gray2: #555;
+  --border: rgba(255,255,255,0.08);
+  --font-head: 'Bebas Neue', sans-serif;
+  --font-cond: 'Barlow Condensed', sans-serif;
+  --font-body: 'Barlow', sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--white);font-family:var(--font-body);overflow-x:hidden;}
+
+
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:1000;display:none;align-items:center;justify-content:center;padding:1rem;}
+.modal-overlay.open{display:flex;}
+.modal{background:var(--dark2);border:1px solid var(--border);width:100%;max-width:560px;max-height:90vh;overflow-y:auto;position:relative;}
+.modal-header{padding:1.5rem 2rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
+.modal-title{font-family:var(--font-head);font-size:28px;}
+.modal-close{background:none;border:none;color:var(--gray);font-size:20px;cursor:pointer;padding:.25rem;}
+.modal-body{padding:2rem;}
+.form-group{margin-bottom:1.25rem;}
+.form-group label{display:block;font-family:var(--font-cond);font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem;}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:var(--dark3);border:1px solid var(--border);color:var(--white);padding:.75rem 1rem;font-family:var(--font-body);font-size:14px;outline:none;transition:border-color .2s;}
+.form-group input:focus,.form-group select:focus{border-color:var(--blue3);}
+.form-group select option{background:var(--dark3);}
+.form-hint{font-size:12px;color:var(--gray);margin-top:.4rem;}
+.selected-pkg{background:rgba(233,219,194,0.08);border:1px solid rgba(233,219,194,0.2);padding:1rem;margin-bottom:1.5rem;font-family:var(--font-cond);}
+.selected-pkg .sp-name{font-size:18px;color:var(--white);}
+.selected-pkg .sp-price{font-size:24px;color:var(--blue);}
+
+
+/* MAIN SITE VISIBILITY */
+
+/* TOAST */
+.toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:var(--dark2);border:1px solid var(--blue3);color:var(--white);padding:1rem 2rem;font-family:var(--font-cond);font-size:14px;letter-spacing:1px;z-index:2000;opacity:0;transition:opacity .3s;pointer-events:none;}
+.toast.show{opacity:1;}
+
+/* MOBILE - shared button sizing */
+@media(max-width:900px){
+  .btn-sm{padding:.4rem .7rem;font-size:11px;}
+}
