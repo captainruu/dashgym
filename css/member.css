@@ -2,7 +2,7 @@
 #login-page{display:flex;min-height:100vh;align-items:center;justify-content:center;background:var(--black);}
 .login-box{background:var(--dark2);border:1px solid var(--border);padding:3rem;width:100%;max-width:440px;text-align:center;}
 .login-logo{margin-bottom:2rem;}
-.login-logo img{height:50px;filter:brightness(0) invert(1);}
+.login-logo img{height:50px;}
 .login-title{font-family:var(--font-head);font-size:36px;color:var(--white);margin-bottom:.5rem;}
 .login-sub{font-size:14px;color:var(--gray);margin-bottom:2rem;}
 

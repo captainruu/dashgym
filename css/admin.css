@@ -1,9 +1,8 @@
 /* ADMIN DASHBOARD */
-#admin-page{display:none!important;min-height:100vh;background:var(--black);}
-#admin-page.active{display:flex!important;}
+#admin-page{display:flex;min-height:100vh;background:var(--black);}
 .admin-sidebar{width:240px;background:var(--dark);border-right:1px solid var(--border);padding:1.5rem 0;position:fixed;top:0;bottom:0;overflow-y:auto;}
 .admin-sidebar .logo{padding:1rem 1.5rem 2rem;}
-.admin-sidebar .logo img{height:36px;filter:brightness(0) invert(1);}
+.admin-sidebar .logo img{height:36px;}
 .admin-nav{list-style:none;}
 .admin-nav li a,.admin-nav li button{display:flex;align-items:center;gap:.75rem;padding:.75rem 1.5rem;color:var(--gray);text-decoration:none;font-family:var(--font-cond);font-size:13px;letter-spacing:1px;text-transform:uppercase;cursor:pointer;background:none;border:none;width:100%;transition:all .2s;}
 .admin-nav li a:hover,.admin-nav li button:hover,.admin-nav li a.active,.admin-nav li button.active{color:var(--blue);background:rgba(233,219,194,0.06);border-left:2px solid var(--blue);}
