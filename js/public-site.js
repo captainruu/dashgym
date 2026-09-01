@@ -1,11 +1,10 @@
 // ============================================================
 // PUBLIC SITE — used only by index.html
-// (hero slider, packages/promo rendering, join modal, chatbox, mobile nav)
+// (hero slider, packages rendering, join modal, chatbox, mobile nav)
 // ============================================================
 import { DEFAULT_PACKAGES } from './config.js';
 import { currentLang, formatPrice, showToast, openModal, closeModal } from './utils.js';
 import { dbGetPackages } from './db-packages.js';
-import { dbGetPromos } from './db-promos.js';
 
 let heroIndex = 0;
 
@@ -88,68 +87,6 @@ window.renderPackages=renderPackages;
 // ============================================================
 // PROMO RENDER
 // ============================================================
-async function renderPromos(){
-  const promos=await dbGetPromos();
-  const grid=document.getElementById('promoGrid');
-  if(!grid) return;
-  if(!promos.length){ grid.innerHTML='<div class="promo-empty"><p>No active promotions at the moment. Check back soon!</p></div>'; return; }
-  grid.innerHTML=promos.map((pr,i)=>`
-    <div class="promo-card" onclick="openPromoPopup(${i})">
-      ${pr.img?`<img class="promo-img" src="${pr.img}" alt="${pr.title}" onerror="this.style.display='none'">`:''}
-      <div class="promo-body">
-        ${pr.tag?`<div class="promo-tag">${pr.tag}</div>`:''}
-        <div class="promo-title">${pr.title}</div>
-        <div class="promo-desc">${pr.desc||''}</div>
-      </div>
-    </div>`).join('');
-  window._promoData = promos;
-}
-
-function openPromoPopup(idx){
-  const pr = (window._promoData||[])[idx];
-  if(!pr) return;
-
-  const modal    = document.getElementById('promoPopupModal');
-  const imgWrap  = document.getElementById('promoPopupImgWrap');
-  const img      = document.getElementById('promoPopupImg');
-  const caption  = document.getElementById('promoPopupCaption');
-  const tagEl    = document.getElementById('promoPopupTag');
-  const titleEl  = document.getElementById('promoPopupTitle');
-  const descEl   = document.getElementById('promoPopupDesc');
-  const waBtn    = document.getElementById('promoPopupWABtn');
-
-  // --- Poster image (full 4:5, no crop) ---
-  if(pr.img){
-    img.src = pr.img;
-    img.alt = pr.title||'Promo';
-    imgWrap.style.display = 'block';
-  } else {
-    imgWrap.style.display = 'none';
-  }
-
-  // --- Caption (only show if title or tag exists) ---
-  const hasText = !!(pr.title || pr.tag || pr.desc);
-  caption.style.display = hasText ? 'block' : 'none';
-
-  if(pr.tag){ tagEl.textContent=pr.tag; tagEl.style.display='block'; }
-  else { tagEl.style.display='none'; }
-
-  if(pr.title){ titleEl.textContent=pr.title; }
-  else { titleEl.textContent=''; }
-
-  if(pr.desc){ descEl.textContent=pr.desc; descEl.style.display='block'; }
-  else { descEl.style.display='none'; }
-
-  // --- WhatsApp link includes promo title ---
-  const waMsg = `Halo Dash Gym Bali! 👋\n\nI am interested in the promo *${pr.title||''}*.\n\nCan I get more info? 🙏`;
-  waBtn.href = `https://wa.me/6285190940487?text=${encodeURIComponent(waMsg)}`;
-
-  modal.style.display = 'flex';
-}
-window.openPromoPopup=openPromoPopup;
-window.renderPromos=renderPromos;
-
-
 // ============================================================
 // JOIN MODAL
 // ============================================================
@@ -219,4 +156,4 @@ window.toggleMobileNav=toggleMobileNav;
 
 // ============================================================
 
-export { initHero, initHeroTilt, goHero, renderPackages, renderPromos, openPromoPopup, openJoin, submitJoin, getAIReply, sendChat, toggleChat, toggleMobileNav };
+export { initHero, initHeroTilt, goHero, renderPackages, openJoin, submitJoin, getAIReply, sendChat, toggleChat, toggleMobileNav };

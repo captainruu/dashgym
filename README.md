@@ -1,6 +1,6 @@
 # Dash Gym Bali — Website
 
-Struktur multi-halaman (bukan lagi 1 file HTML raksasa) untuk website DASH Gym Bali. Backend: **Firebase Firestore + Auth** (data member, packages, promo, check-in, login admin) dan **Supabase Storage** (upload gambar promo).
+Struktur multi-halaman (bukan lagi 1 file HTML raksasa) untuk website DASH Gym Bali. Backend: **Firebase Firestore + Auth** (data member, packages, login admin).
 
 ## Struktur Folder
 
@@ -16,23 +16,22 @@ Struktur multi-halaman (bukan lagi 1 file HTML raksasa) untuk website DASH Gym B
 │   ├── member.css        → Styling khusus login.html, admin-login.html, member.html
 │   └── admin.css         → Styling khusus admin.html
 ├── js/
-│   ├── config.js          → Konfigurasi Firebase & Supabase + data paket default
+│   ├── config.js          → Konfigurasi Firebase + data paket default
 │   ├── utils.js            → Fungsi bantu umum (toast, loading, bahasa, modal, sesi member)
 │   ├── db-members.js       → Query Firestore untuk data member
-│   ├── db-checkins.js      → Query Firestore untuk data check-in
 │   ├── db-packages.js      → Query Firestore untuk data paket harga
-│   ├── db-promos.js        → Query Firestore untuk data promo
 │   ├── auth.js              → Login member, login admin, logout, page guard
 │   ├── card-generator.js    → Generate kartu member digital (canvas + QR)
-│   ├── public-site.js       → Logic khusus index.html (hero slider, packages, promo, chatbot)
+│   ├── public-site.js       → Logic khusus index.html (hero slider, packages, chatbot)
 │   ├── member-dashboard.js  → Logic khusus member.html
 │   ├── admin-core.js        → Navigasi tab & overview admin.html
 │   ├── admin-members.js     → CRUD member, diskon, export CSV
 │   ├── admin-pricing.js     → Edit harga paket
-│   ├── admin-promo.js       → Upload/hapus artwork promo (Supabase Storage)
-│   └── admin-checkin.js     → Scanner QR check-in + lookup member
+│   └── admin-checkin.js     → Scanner QR untuk cek status member (lookup-only, tanpa log)
 └── assets/images/          → Semua gambar (logo, favicon, foto hero, foto about)
 ```
+
+**Catatan versi ini:** fitur Check-in Log (pencatatan riwayat kunjungan) dan Promo & Events (termasuk upload artwork ke Supabase Storage) sudah dihapus untuk menyederhanakan sistem. Yang tersisa dari fitur QR adalah tab "Scan" — cuma untuk mengecek status member (aktif/expired) tanpa mencatat apa pun ke database. Backend sekarang murni Firebase (Firestore + Auth), Supabase tidak lagi dipakai sama sekali.
 
 ## Cara Menjalankan
 
@@ -55,9 +54,8 @@ Untuk **live/production**, upload semua file & folder ini ke hosting statis (Git
 ## Kredensial Backend
 
 Firebase project: `dash-gym-database`
-Supabase Storage bucket: `promos`
 
-Config sudah ditanam di `js/config.js`. Kalau mau ganti project Firebase/Supabase, cukup edit file itu saja — tidak perlu ubah file lain.
+Config sudah ditanam di `js/config.js`. Kalau mau ganti project Firebase, cukup edit file itu saja — tidak perlu ubah file lain.
 
 ⚠️ Jangan lupa tambahkan domain hosting baru ke **Firebase Console → Authentication → Settings → Authorized domains**, supaya login admin tidak error `auth/unauthorized-domain`.
 

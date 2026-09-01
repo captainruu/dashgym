@@ -21,9 +21,6 @@
 .micard-phone{font-size:15px;color:#333;margin-bottom:1.4rem;}
 .micard-expiry-label{font-family:var(--font-cond);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#777;margin-bottom:.25rem;}
 .micard-expiry{font-size:15px;font-weight:700;color:#dc2626;margin-bottom:1.85rem;}
-.micard-checkin-btn{background:#cfb58c;color:#0a0a0a;border:none;padding:.85rem 2.75rem;border-radius:999px;font-family:var(--font-cond);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;cursor:pointer;transition:opacity .2s,transform .2s;}
-.micard-checkin-btn:hover{opacity:.85;transform:translateY(-1px);}
-.micard-checkin-btn:disabled{opacity:.4;cursor:not-allowed;transform:none;}
 .dash-title{font-family:var(--font-head);font-size:48px;}
 .member-card{background:var(--dark2);border:1px solid var(--border);padding:2.5rem;margin-top:2rem;}
 .member-status{display:flex;align-items:center;gap:.5rem;font-family:var(--font-cond);font-size:13px;letter-spacing:2px;text-transform:uppercase;margin-bottom:.5rem;}

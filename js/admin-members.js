@@ -2,7 +2,6 @@
 // register/extend/discount/delete member, CSV export.
 import { showLoading, hideLoading, showToast, formatPrice, normCode } from './utils.js';
 import { dbGetMembers, dbGetMemberByCode, dbSaveMember, dbUpdateMember, dbDeleteMember } from './db-members.js';
-import { dbGetCheckInsByCode } from './db-checkins.js';
 import { dbGetPackages } from './db-packages.js';
 import { renderOverview } from './admin-core.js';
 
@@ -43,7 +42,6 @@ window.renderMembersTable=renderMembersTable;
 async function showMemberDetails(code){
   showLoading('Loading details…');
   const m=await dbGetMemberByCode(code);
-  const logs=await dbGetCheckInsByCode(code);
   hideLoading();
   if(!m){ showToast('Member not found'); return; }
   const today=new Date(); today.setHours(0,0,0,0);
@@ -76,22 +74,11 @@ async function showMemberDetails(code){
         <div style="font-size:14px;color:${active?'var(--white)':'#ef4444'}">${m.expiryDate}</div>
       </div>
     </div>
-    <div style="margin-bottom:1rem;display:flex;gap:.5rem;flex-wrap:wrap;">
+    <div style="display:flex;gap:.5rem;flex-wrap:wrap;">
       <button class="btn btn-primary btn-sm" onclick="showDigitalCard('${m.code}');document.getElementById('memberDetailsModal').style.display='none'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg> Digital Card</button>
       <button class="btn btn-outline btn-sm" onclick="extendMember('${m.code}')">Extend</button>
       <button class="btn btn-outline btn-sm" onclick="editDiscount('${m.code}')">Edit Discount</button>
-    </div>
-    <div style="font-family:var(--font-cond);font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:.75rem;">Check-in History (${logs.length} visits)</div>
-    ${logs.length===0?'<p style="font-size:13px;color:var(--gray);padding:1rem 0;">No check-ins recorded yet.</p>':
-    `<div style="overflow-x:auto;"><table class="admin-table">
-      <thead><tr><th>Date</th><th>Time</th><th>Package</th><th>Status</th></tr></thead>
-      <tbody>${logs.map(l=>`
-        <tr>
-          <td>${l.date}</td><td>${l.time}</td><td>${l.pkgName||'-'}</td>
-          <td><span class="badge ${l.status==='active'?'badge-active':'badge-expired'}">${l.status}</span></td>
-        </tr>`).join('')}
-      </tbody>
-    </table></div>`}`;
+    </div>`;
   document.getElementById('memberDetailsModal').style.display='flex';
 }
 window.showMemberDetails=showMemberDetails;

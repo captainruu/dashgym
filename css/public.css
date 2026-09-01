@@ -104,19 +104,6 @@ section{padding:6rem 0;}
 .svc-price-unit{font-family:var(--font-cond);font-size:11px;color:var(--gray);letter-spacing:1px;text-align:right;}
 
 /* PROMO */
-#promo{background:var(--dark);}
-.promo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
-.promo-card{background:var(--dark2);border:1px solid var(--border);overflow:hidden;cursor:pointer;transition:transform .2s,border-color .2s;}
-.promo-card:hover{transform:translateY(-4px);border-color:var(--blue3);}
-.promo-img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;filter:brightness(.85);transition:filter .3s;}
-.promo-card:hover .promo-img{filter:brightness(1);}
-.promo-body{padding:1.25rem;}
-.promo-tag{font-family:var(--font-cond);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:.4rem;}
-.promo-title{font-family:var(--font-cond);font-size:18px;font-weight:600;}
-.promo-desc{font-size:13px;color:var(--gray);margin-top:.5rem;line-height:1.6;}
-.promo-empty{text-align:center;padding:4rem;border:1px dashed var(--border);grid-column:1/-1;}
-.promo-empty p{color:var(--gray);font-size:14px;}
-
 /* CONTACT */
 #contact{background:var(--black);}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem;}
@@ -182,5 +169,4 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:3rem 0 
 @media(max-width:600px){
   .pkg-grid{grid-template-columns:1fr;}
   .fac-grid{grid-template-columns:1fr;}
-  .promo-grid{grid-template-columns:1fr;}
 }

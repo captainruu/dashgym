@@ -4,15 +4,14 @@ import { showLoading, hideLoading } from './utils.js';
 import { dbGetMembers } from './db-members.js';
 import { renderMembersTable } from './admin-members.js';
 import { renderPricingAdmin } from './admin-pricing.js';
-import { renderPromoAdmin } from './admin-promo.js';
-import { renderTodayLog, maybeAutoStartScanner, stopScanner, ciStopScanner } from './admin-checkin.js';
+import { maybeAutoStartScanner, stopScanner } from './admin-checkin.js';
 import { renderPackages } from './public-site.js';
 
 // ============================================================
 // ADMIN — TAB NAVIGATION
 // ============================================================
 function adminTab(tab){
-  const tabs=['overview','members','addmember','pricing','promo','checkin','scan'];
+  const tabs=['overview','members','addmember','pricing','scan'];
   tabs.forEach(t=>{
     document.getElementById('admin-'+t).style.display=t===tab?'block':'none';
     const el=document.getElementById('tab-'+t);
@@ -21,12 +20,9 @@ function adminTab(tab){
   if(tab==='overview')  renderOverview();
   if(tab==='members')   renderMembersTable();
   if(tab==='pricing')   renderPricingAdmin();
-  if(tab==='promo')     renderPromoAdmin();
   if(tab==='addmember'){ renderPackages(); document.getElementById('newStart').value=new Date().toISOString().split('T')[0]; }
-  if(tab==='checkin')   renderTodayLog();
   if(tab==='scan')      setTimeout(maybeAutoStartScanner,300);
   if(tab!=='scan')      stopScanner();
-  if(tab!=='checkin')   ciStopScanner();
 }
 function renderAdmin(){ adminTab('overview'); }
 window.adminTab=adminTab; window.renderAdmin=renderAdmin;

@@ -5,9 +5,6 @@ import { initializeApp }    from "https://www.gstatic.com/firebasejs/11.0.1/fire
 import {
   getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-// Supabase is used ONLY for Storage (artwork uploads).
-// Firestore + Firebase Auth remain unchanged for everything else.
-import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
 import {
   getFirestore, collection, doc,
   getDocs, getDoc, setDoc, addDoc, updateDoc, deleteDoc,
@@ -26,11 +23,6 @@ const firebaseConfig = {
 const app     = initializeApp(firebaseConfig);
 const db      = getFirestore(app);
 const auth    = getAuth(app);
-const SUPABASE_URL = "https://wcdrzubeaxazddxdaaub.supabase.co";
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndjZHJ6dWJlYXhhemRkeGRhYXViIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3MzAyMDIsImV4cCI6MjEwMzMwNjIwMn0.Jsd6YsskU2EAlyFyVcufcXQ0-2eQRvMdA9K8fKP-9Kc";
-const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-const PROMO_BUCKET = "promos";
-
 // Logo assets — now real files instead of embedded base64
 // (paths are relative to any page at the project root)
 const LOGO_GOLD_URL  = "assets/images/logo-gold.png";
@@ -55,4 +47,4 @@ const DEFAULT_PACKAGES = [
 ];
 
 
-export { db, auth, supabase, PROMO_BUCKET, DEFAULT_PACKAGES, LOGO_GOLD_URL, LOGO_WHITE_URL, signInWithEmailAndPassword, signOut, onAuthStateChanged, collection, doc, getDocs, getDoc, setDoc, addDoc, updateDoc, deleteDoc, serverTimestamp, query, orderBy, where };
+export { db, auth, DEFAULT_PACKAGES, LOGO_GOLD_URL, LOGO_WHITE_URL, signInWithEmailAndPassword, signOut, onAuthStateChanged, collection, doc, getDocs, getDoc, setDoc, addDoc, updateDoc, deleteDoc, serverTimestamp, query, orderBy, where };
